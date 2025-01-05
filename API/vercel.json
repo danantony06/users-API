@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "SupabaseEndpoints.js"
+        }
+    ],
+    "builds": [
+        {
+          "src": "SupabaseEndpoints.js", 
+          "use": "@vercel/node"
+        }
+      ]
+    
+}
