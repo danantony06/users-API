@@ -9,10 +9,10 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANO
 
 const app = express();
 
+// origin: "http://localhost:3000 , https://api-djczkqvje-daniel-antonys-projects-582fc591.vercel.app" ,
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
     credentials: true,
     methods:'POST',
     allowedHeaders: 'Content-Type, Accept, Accept-Language',
