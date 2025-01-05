@@ -3,7 +3,11 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "SupabaseEndpoints.js"
+            "dest": "SupabaseEndpoints.js",
+            "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*"
+            }
         }
     ],
     "builds": [
