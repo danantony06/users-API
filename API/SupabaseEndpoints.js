@@ -13,13 +13,21 @@ const app = express();
 
 app.use(
   cors({
+    origin: '*',
     credentials: true,
     methods:'POST',
     allowedHeaders: 'Content-Type, Accept, Accept-Language',
     exposedHeadersHeaders: 'Content-Type, Accept, Accept-Language'
   })
 );
+
+app.use(function(req,res,next) {
+  res.header("Access-Control-Allow-Origin", "*"),
+  res.header("Acess-Control-Allow-Headers", "Origin, X-Requested-With,Content-Type,Accept");
+  next();
+})
 app.use(express.json());
+
 
 
 
